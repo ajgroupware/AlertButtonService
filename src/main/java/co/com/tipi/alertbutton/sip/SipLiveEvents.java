@@ -82,7 +82,19 @@ public class SipLiveEvents implements ManagerEventListener{
         boolean active = true;
         while (active) {
             // wait 10 min for events to come in
-            Thread.sleep(1000*60*10);
+            //Thread.sleep(1000*60*10);
+            try {
+                Thread.sleep(1000*60*10);
+            } catch (InterruptedException e) {
+                try {
+                    Thread.currentThread().interrupt(); // restore interrupted status
+                } catch (Exception ex) {
+                    e.printStackTrace();
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 
         // and finally log off and disconnect

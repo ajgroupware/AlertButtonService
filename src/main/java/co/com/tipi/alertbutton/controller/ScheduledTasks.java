@@ -33,9 +33,10 @@ public class ScheduledTasks {
     public void reportCurrentTime() {
         log.info("--The time is now {} ", dateFormat.format(new Date()));
 
-        findCalls();
+        //findCalls();
     }
 
+    /*
     private void findCalls() {
         List<String> list = alertService.listCall();
         log.info("--listPhone: " + list.toString());
@@ -48,4 +49,5 @@ public class ScheduledTasks {
             }
         }
     }
+    */
 }

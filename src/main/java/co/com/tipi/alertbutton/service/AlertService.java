@@ -18,13 +18,14 @@ public class AlertService {
 
     private static final Logger logger = LoggerFactory.getLogger(AlertService.class);
 
+    /*
     @Autowired
     private Connection mysqlDBConnection;
-
+    */
     @Autowired
     private Connection sqliteDBConnection;
 
-
+    /*
     public List<String> listCall() {
         logger.info("--listCall ");
         List<String> listCall = new ArrayList<>();
@@ -78,7 +79,7 @@ public class AlertService {
 
         return listCall;
     }
-
+    */
 
 
 

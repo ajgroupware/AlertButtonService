@@ -32,6 +32,7 @@ public class SqliteDBConfig {
             Class.forName(driver);
             // SQLite connection string
             String dbFile = System.getProperty("user.home") + "/IdeaProjects/alertbutton/alertbutton.db";
+            logger.info("--dbFile " + dbFile);
             String url = "jdbc:sqlite:"+dbFile;
 
             try {
